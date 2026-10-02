@@ -1,0 +1,184 @@
+object frmExtSVGImageListEditor: TfrmExtSVGImageListEditor
+  Left = 480
+  Height = 268
+  Top = 141
+  Width = 484
+  Caption = 'SVG Image List'
+  ClientHeight = 268
+  ClientWidth = 484
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  object lstboxImages: TListBox
+    Left = 8
+    Height = 192
+    Top = 40
+    Width = 315
+    Anchors = [akTop, akLeft, akBottom]
+    ItemHeight = 16
+    ScrollWidth = 313
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+    OnDrawItem = lstboxImagesDrawItem
+    OnSelectionChange = lstboxImagesSelectionChange
+  end
+  object btnAdd: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Add'
+    TabOrder = 1
+    OnClick = btnAddClick
+  end
+  object btnRemove: TButton
+    Left = 88
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Remove'
+    Enabled = False
+    TabOrder = 2
+    OnClick = btnRemoveClick
+  end
+  object btnUp: TButton
+    Left = 328
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Up'
+    Enabled = False
+    TabOrder = 3
+    OnClick = btnUpClick
+  end
+  object btnDown: TButton
+    Left = 408
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Down'
+    Enabled = False
+    TabOrder = 4
+    OnClick = btnDownClick
+  end
+  object BCSVGViewerPreview: TBCSVGViewer
+    Left = 328
+    Height = 192
+    Top = 40
+    Width = 144
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    SVGString = '<?xml version="1.0" encoding="utf-8"?>'#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#10
+    DrawCheckers = True
+    Color = clForm
+    ColorOpacity = 128
+    Caption = 'BCSVGViewerPreview'
+  end
+  object btnReplace: TButton
+    Left = 168
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Replace'
+    Enabled = False
+    TabOrder = 5
+    OnClick = btnReplaceClick
+  end
+  object CheckBox_UseSVGAlignment: TCheckBox
+    Left = 13
+    Height = 18
+    Top = 242
+    Width = 230
+    Anchors = [akLeft, akBottom]
+    Caption = 'Use SVG alignment and aspect ratio'
+    TabOrder = 6
+    OnChange = CheckBox_UseSVGAlignmentChange
+  end
+  object tbAlign: TToolBar
+    Left = 323
+    Height = 26
+    Top = 232
+    Width = 147
+    Align = alNone
+    Anchors = [akLeft, akBottom]
+    Caption = 'tbAlign'
+    Images = AlignImageList
+    TabOrder = 7
+    object tbAlignLeft: TToolButton
+      Left = 1
+      Top = 2
+      Grouped = True
+      ImageIndex = 0
+      Style = tbsCheck
+      OnClick = tbAlignClick
+    end
+    object tbAlignCenter: TToolButton
+      Tag = 1
+      Left = 24
+      Top = 2
+      Grouped = True
+      ImageIndex = 1
+      Style = tbsCheck
+      OnClick = tbAlignClick
+    end
+    object tbAlignRight: TToolButton
+      Tag = 2
+      Left = 47
+      Top = 2
+      Grouped = True
+      ImageIndex = 2
+      Style = tbsCheck
+      OnClick = tbAlignClick
+    end
+    object Separator: TToolButton
+      Left = 70
+      Height = 22
+      Top = 2
+      Caption = 'ToolButton_Divider'
+      Style = tbsDivider
+    end
+    object tbAlignTop: TToolButton
+      Tag = 3
+      Left = 75
+      Top = 2
+      Grouped = True
+      ImageIndex = 3
+      Style = tbsCheck
+      OnClick = tbAlignClick
+    end
+    object tbAlignVCenter: TToolButton
+      Tag = 4
+      Left = 98
+      Top = 2
+      Grouped = True
+      ImageIndex = 4
+      Style = tbsCheck
+      OnClick = tbAlignClick
+    end
+    object tbAlignBottom: TToolButton
+      Tag = 5
+      Left = 121
+      Top = 2
+      Grouped = True
+      ImageIndex = 5
+      Style = tbsCheck
+      OnClick = tbAlignClick
+    end
+  end
+  object SVGOpenDialog: TOpenDialog
+    Filter = 'SVG images (*.svg)|*.svg|All files|*'
+    Options = [ofAllowMultiSelect, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 32
+    Top = 64
+  end
+  object AlignImageList: TImageList
+    Scaled = True
+    Left = 88
+    Top = 64
+    Bitmap = {
+      4C7A060000001000000010000000830000000000000078DAED55410E8030089B
+      EFE6E0EFFC16EEB8180FE246412C09E1D434A4B4B4365FAABABFE911BFF561E9
+      2BDE83DF82F7DEDF9B1FA55F347FC5FB89AE0AFA8D7DC7272207C27F51FE5981
+      B76600EF87FECFA8DF133DBDF933EDBF32BF90FFF72FF743FFF3FF67F13FF178
+      7C05FF7F1DCFFC627ED1FFD48FF9C7FC43E7DF4C9DABAFBE27
+    }
+  end
+end

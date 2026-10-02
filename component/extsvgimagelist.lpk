@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="ExtSVGImageList"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Ovidio Y. Peña Rodríguez"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="A Lazarus/FPC component that extends the standard TImageList with native SVG support"/>
+    <License Value="This component is released under the GNU Lesser General Public License v2.1 or later (LGPL-2.1-or-later).
+
+You are free to use, study, modify, and redistribute it under the terms of the LGPL. If you distribute a modified version of this library component, you must do so under the same license.
+
+See https://www.gnu.org/licenses/lgpl-2.1.html for the full license text."/>
+    <Version Major="1"/>
+    <Files>
+      <Item>
+        <Filename Value="uextsvgimagelist.pas"/>
+        <UnitName Value="uextsvgimagelist"/>
+      </Item>
+      <Item>
+        <Filename Value="uextsvgimagelisteditor.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uextsvgimagelisteditor"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="bgracontrols"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 45.625 45.625"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="TExtSVGImageList.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   inkscape:export-filename="TExtSVGImageList_200.png"
+   inkscape:export-xdpi="9.2159996"
+   inkscape:export-ydpi="9.2159996"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.295"
+     inkscape:cx="398.30508"
+     inkscape:cy="398.30508"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">fundamentals/css/images</title>
+  <desc
+     id="desc1">Created with Sketch.</desc>
+  <defs
+     id="defs1" />
+  <g
+     id="g2">
+    <g
+       id="g1">
+      <rect
+         id="rect1"
+         stroke="#000000"
+         stroke-width="1.04282"
+         x="0.55051655"
+         y="0.55051655"
+         width="37.223965"
+         height="37.223972"
+         rx="4.4110169"
+         ry="5.3389831"
+         style="fill:#87ceeb;fill-opacity:1;fill-rule:nonzero;stroke-width:1.10103;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+         inkscape:label="Fondo" />
+      <path
+         id="rect1-3"
+         style="fill:#1a9172;fill-opacity:1;fill-rule:nonzero;stroke-width:1.10103;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+         d="m 29.142434,18.81051 -8.304285,11.72616 4.336514,5.590845 0.994304,1.281955 h 6.646992 c 2.443701,0 4.411011,-2.381222 4.411011,-5.339016 v -3.705605 z"
+         inkscape:label="Pico2" />
+      <polygon
+         id="polygon1"
+         fill="#25ae88"
+         points="47.853219,64.050188 33.803031,50 12,69.196969 53,69.196969 "
+         transform="matrix(0.52428121,0,0,0.52428131,1.0747978,1.0747978)"
+         style="fill-rule:nonzero;stroke:none;stroke-width:1"
+         inkscape:label="Pico1" />
+    </g>
+    <ellipse
+       id="Oval"
+       fill="#efce4a"
+       cx="12.120879"
+       cy="13.169443"
+       style="fill-rule:nonzero;stroke:none;stroke-width:0.524281"
+       rx="4.7547069"
+       ry="4.7547073"
+       inkscape:label="Sol" />
+  </g>
+  <g
+     id="g3"
+     transform="translate(3.6499985,3.6499985)"
+     inkscape:label="g4">
+    <g
+       id="g2-6"
+       inkscape:label="g3">
+      <rect
+         id="rect1-2"
+         stroke="#000000"
+         stroke-width="1.04282"
+         x="0.55051655"
+         y="0.55051655"
+         width="37.223965"
+         height="37.223972"
+         rx="4.4110169"
+         ry="5.3389831"
+         style="fill:#87ceeb;fill-opacity:1;fill-rule:nonzero;stroke-width:1.10103;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+         inkscape:label="Fondo" />
+      <path
+         id="rect1-3-8"
+         style="fill:#1a9172;fill-opacity:1;fill-rule:nonzero;stroke-width:1.10103;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+         d="m 29.142434,18.81051 -8.304285,11.72616 4.336514,5.590845 0.994304,1.281955 h 6.646992 c 2.443701,0 4.411011,-2.381222 4.411011,-5.339016 v -3.705605 z"
+         inkscape:label="Pico2" />
+      <polygon
+         id="polygon1-5"
+         fill="#25ae88"
+         points="33.803031,50 12,69.196969 53,69.196969 47.853219,64.050188 "
+         transform="matrix(0.52428121,0,0,0.52428131,1.0747978,1.0747978)"
+         style="fill-rule:nonzero;stroke:none;stroke-width:1"
+         inkscape:label="Pico1" />
+    </g>
+    <ellipse
+       id="Oval-9"
+       fill="#efce4a"
+       cx="12.120879"
+       cy="13.169443"
+       style="fill-rule:nonzero;stroke:none;stroke-width:0.524281"
+       rx="4.7547069"
+       ry="4.7547073"
+       inkscape:label="Sol" />
+  </g>
+  <g
+     id="g3-0"
+     transform="translate(7.2999985,7.2999985)"
+     inkscape:label="g6">
+    <g
+       id="g2-6-4"
+       inkscape:label="g5">
+      <rect
+         id="rect1-2-6"
+         stroke="#000000"
+         stroke-width="1.04282"
+         x="0.55051655"
+         y="0.55051655"
+         width="37.223965"
+         height="37.223972"
+         rx="4.4110169"
+         ry="5.3389831"
+         style="fill:#87ceeb;fill-opacity:1;fill-rule:nonzero;stroke-width:1.10103;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+         inkscape:label="Fondo" />
+      <path
+         id="rect1-3-8-4"
+         style="fill:#1a9172;fill-opacity:1;fill-rule:nonzero;stroke-width:1.10103;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none"
+         d="m 29.142434,18.81051 -8.304285,11.72616 4.336514,5.590845 0.994304,1.281955 h 6.646992 c 2.443701,0 4.411011,-2.381222 4.411011,-5.339016 v -3.705605 z"
+         inkscape:label="Pico2" />
+      <polygon
+         id="polygon1-5-6"
+         fill="#25ae88"
+         points="33.803031,50 12,69.196969 53,69.196969 47.853219,64.050188 "
+         transform="matrix(0.52428121,0,0,0.52428131,1.0747978,1.0747978)"
+         style="fill-rule:nonzero;stroke:none;stroke-width:1"
+         inkscape:label="Pico1" />
+    </g>
+    <ellipse
+       id="Oval-9-4"
+       fill="#efce4a"
+       cx="12.120879"
+       cy="13.169443"
+       style="fill-rule:nonzero;stroke:none;stroke-width:0.524281"
+       rx="4.7547069"
+       ry="4.7547073"
+       inkscape:label="Sol" />
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>fundamentals/css/images</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
