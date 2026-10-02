@@ -1,4 +1,4 @@
-# ExtSVGImageList
+# ![TExtSVGImageList](images/TExtSVGImageList_150.png)ExtSVGImageList
 
 A Lazarus/FPC component that extends the standard `TImageList` with native SVG support. SVG sources are stored losslessly inside the `.lfm` form file and rasterized at runtime at every required Hi-DPI resolution, so icons always look sharp on any display, from a 96 DPI laptop screen to a 4K monitor.
 
