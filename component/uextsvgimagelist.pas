@@ -66,7 +66,6 @@ type
     FOnRenderError: TExtSVGRenderErrorEvent;
     procedure ReadSVGData(Stream: TStream);
     procedure WriteSVGData(Stream: TStream);
-    procedure SkipLegacyBitmapData(Stream: TStream);
     procedure CheckSVGIndex(AIndex: Integer);
     procedure ClearSVGCache;
     function  GetCachedSVG(AIndex: Integer): TBGRASVG;
@@ -308,14 +307,13 @@ procedure TExtSVGImageList.ReadSVGData(Stream: TStream);
       if AStream.Read(c, SizeOf(c)) = 0 then Break;
       case c of
         #10: Exit(tlbsLF);
-        #13:
-          begin
-            if AStream.Read(c, SizeOf(c)) = 0 then c := #0;
-            if c = #10 then
-              Exit(tlbsCRLF)
-            else
-              Exit(tlbsCR);
-          end;
+        #13: begin
+          if AStream.Read(c, SizeOf(c)) = 0 then c := #0;
+          if c = #10 then
+            Exit(tlbsCRLF)
+          else
+            Exit(tlbsCR);
+        end;
       end;
     end;
     Result := DefaultTextLineBreakStyle;
@@ -360,13 +358,6 @@ begin
   end;
 end;
 
-procedure TExtSVGImageList.SkipLegacyBitmapData(Stream: TStream);
-begin
-  // Older versions of this component (through TCustomImageList) also stored
-  // the rasterized images. They are regenerated from the SVG sources, so the
-  // data is simply ignored; it disappears from the LFM on the next save.
-end;
-
 procedure TExtSVGImageList.Load(const XMLConf: TXMLConfig);
 var
   i, ItemCount: Integer;
@@ -408,16 +399,10 @@ var
   end;
 
 begin
-  // TCustomImageList.DefineProperties would stream the rasterized images
-  // They are rebuilt from the SVG sources, storing them only bloats the LFM
-  // Skip it and call TComponent.DefineProperties directly
+  // Rasterized images are rebuilt from the SVG sources, storing them only bloats the LFM
   M.Code := @TComponent.DefineProperties;
   M.Data := Self;
   TDefinePropertiesProc(M)(Filer);
-
-  // Still accept these when reading LFMs saved by older versions
-  Filer.DefineBinaryProperty('Bitmap', @SkipLegacyBitmapData, nil, False);
-  Filer.DefineBinaryProperty('BitmapAdv', @SkipLegacyBitmapData, nil, False);
 
   Filer.DefineBinaryProperty('Items', @ReadSVGData, @WriteSVGData, ItemsDiffer);
   Filer.DefineProperty('ScalesEmpty', @ReadScalesEmpty, @WriteScalesEmpty, FScales.Count = 0);
@@ -454,8 +439,7 @@ begin
   if not FRasterizing then
   begin
     FInUpdate := False;
-    // Rebuild here, while the update is still open, so consumers are
-    // notified only once by the inherited EndUpdate
+    // Rebuild here, while the update is still open, to notify only once
     if not FRasterized then
       Rasterize;
   end;
@@ -730,7 +714,6 @@ begin
       on E: Exception do
       begin
         // Keep a transparent placeholder so the raster indexes stay aligned
-        // with the SVG entries, and report the problem
         Bmp.FillTransparent;
         if Assigned(FOnRenderError) then
           FOnRenderError(Self, AIndex, E);
@@ -752,8 +735,7 @@ begin
   try
     for i := 0 to High(Bitmaps) do
     begin
-      // Use the inherited height computation, so that each bitmap has exactly
-      // the size of its resolution and is not resampled by the image list
+      // Use the inherited height computation
       H := HeightForWidth[FRasterWidths[i]];
       if H <= 0 then H := FRasterWidths[i];
       Bitmaps[i] := CreateRasterBitmap(AIndex, FRasterWidths[i], H);
