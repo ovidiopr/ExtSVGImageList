@@ -70,6 +70,7 @@ type
     procedure ClearSVGCache;
     function  GetCachedSVG(AIndex: Integer): TBGRASVG;
     function  ParseSVG(const ASVG: string): TBGRASVG;
+    function  NormalizeSVG(const ASVG: string; ASVGObj: TBGRASVG): string;
     function  DedupSortedWidths(const AWidths: array of Integer): TIntegerDynArray;
     function  CreateRasterBitmap(AIndex, AWidth, AHeight: Integer): TBitmap;
     function  AddRasterItem(AIndex: Integer): Integer;
@@ -534,6 +535,15 @@ begin
   Result := TBGRASVG.CreateFromString(ASVG);
 end;
 
+function TExtSVGImageList.NormalizeSVG(const ASVG: string; ASVGObj: TBGRASVG): string;
+begin
+  // The LFM stores the sources as UTF-8
+  if (ASVG = '') or (FindInvalidUTF8Codepoint(PChar(ASVG), Length(ASVG)) < 0) then
+    Result := ASVG
+  else
+    Result := ASVGObj.AsUTF8String;
+end;
+
 function TExtSVGImageList.GetCachedSVG(AIndex: Integer): TBGRASVG;
 begin
   CheckSVGIndex(AIndex);
@@ -831,7 +841,7 @@ var
 begin
   SVG := ParseSVG(ASVG); // Raises on invalid input, nothing changed yet
   try
-    Result := FItems.Add(ASVG);
+    Result := FItems.Add(NormalizeSVG(ASVG, SVG));
     FSVGCache.Add(SVG);
     SVG := nil;
   finally
@@ -922,7 +932,7 @@ begin
   CheckSVGIndex(AIndex);
   SVG := ParseSVG(ASVG); // Raises on invalid input, nothing changed yet
   Incremental := CanUpdateRasterIncrementally;
-  FItems[AIndex] := ASVG;
+  FItems[AIndex] := NormalizeSVG(ASVG, SVG);
   FSVGCache[AIndex] := SVG; // The owning list frees the old object
 
   if Incremental then
